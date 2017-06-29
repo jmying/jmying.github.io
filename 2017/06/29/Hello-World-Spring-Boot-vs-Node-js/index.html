@@ -6,13 +6,13 @@
   <title>Hello World ! Spring Boot vs Node.js | jmying</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="在很长的时间里，java给我的印象是很low的。看到java的web应用jsp + servlet亦或是 struts2。繁琐的编码，配置，再打包发布到web容器，我始终认为生命不应如此浪费。原谅我没有经历过那个web刚刚诞生的年代，我知道当时拥有jvm虚拟机的java的推出是有多么伟大的创新，然而我就是不满足。 然而诸如node.js等后生晚辈从编码到运行起来是如此简介,没有对比就没有伤害 ex">
-<meta name="keywords" content="Server-Side,node.js">
+<meta name="keywords" content="Server-Side,node.js,spring,spring boot,java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World ! Spring Boot vs Node.js">
 <meta property="og:url" content="https://jmying.github.io/2017/06/29/Hello-World-Spring-Boot-vs-Node-js/index.html">
 <meta property="og:site_name" content="jmying">
 <meta property="og:description" content="在很长的时间里，java给我的印象是很low的。看到java的web应用jsp + servlet亦或是 struts2。繁琐的编码，配置，再打包发布到web容器，我始终认为生命不应如此浪费。原谅我没有经历过那个web刚刚诞生的年代，我知道当时拥有jvm虚拟机的java的推出是有多么伟大的创新，然而我就是不满足。 然而诸如node.js等后生晚辈从编码到运行起来是如此简介,没有对比就没有伤害 ex">
-<meta property="og:updated_time" content="2017-06-29T11:39:03.446Z">
+<meta property="og:updated_time" content="2017-06-29T11:49:54.843Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World ! Spring Boot vs Node.js">
 <meta name="twitter:description" content="在很长的时间里，java给我的印象是很low的。看到java的web应用jsp + servlet亦或是 struts2。繁琐的编码，配置，再打包发布到web容器，我始终认为生命不应如此浪费。原谅我没有经历过那个web刚刚诞生的年代，我知道当时拥有jvm虚拟机的java的推出是有多么伟大的创新，然而我就是不满足。 然而诸如node.js等后生晚辈从编码到运行起来是如此简介,没有对比就没有伤害 ex">
@@ -53,6 +53,10 @@ ga('send', 'pageview');
       <h1 id="logo-wrap">
         <a href="/" id="logo">jmying</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">曾经沧海难为水</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -111,15 +115,15 @@ ga('send', 'pageview');
 <h4 id="其实java也可以，因为有你，Spring-Boot"><a href="#其实java也可以，因为有你，Spring-Boot" class="headerlink" title="其实java也可以，因为有你，Spring Boot"></a>其实java也可以，因为有你，Spring Boot</h4><p>hello/SampleController.java</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">package hello;</div><div class="line"></div><div class="line">import org.springframework.boot.*;</div><div class="line">import org.springframework.boot.autoconfigure.*;</div><div class="line">import org.springframework.stereotype.*;</div><div class="line">import org.springframework.web.bind.annotation.*;</div><div class="line"></div><div class="line">@Controller</div><div class="line">@EnableAutoConfiguration</div><div class="line">public class SampleController &#123;</div><div class="line"></div><div class="line">    @RequestMapping(&quot;/&quot;)</div><div class="line">    @ResponseBody</div><div class="line">    String home() &#123;</div><div class="line">        return &quot;Hello World!&quot;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void main(String[] args) throws Exception &#123;</div><div class="line">        SpringApplication.run(SampleController.class, args);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="只多一步，一样酸爽的启动服务了！"><a href="#只多一步，一样酸爽的启动服务了！" class="headerlink" title="只多一步，一样酸爽的启动服务了！"></a>只多一步，一样酸爽的启动服务了！</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ javac  hello/SampleController.java</div><div class="line">$ java  hello/SampleController</div></pre></td></tr></table></figure>
-<h4 id="一样的酸爽，同样的简洁。为什么不继续node-js。又走回头路？"><a href="#一样的酸爽，同样的简洁。为什么不继续node-js。又走回头路？" class="headerlink" title="一样的酸爽，同样的简洁。为什么不继续node.js。又走回头路？"></a>一样的酸爽，同样的简洁。为什么不继续node.js。又走回头路？</h4><h3 id="透过现象看本质"><a href="#透过现象看本质" class="headerlink" title="透过现象看本质"></a>透过现象看本质</h3><p>编译型语言vs 解释行语言</p>
+<h4 id="一样的酸爽，同样的简洁。为什么不继续node-js-又走回头路？"><a href="#一样的酸爽，同样的简洁。为什么不继续node-js-又走回头路？" class="headerlink" title="一样的酸爽，同样的简洁。为什么不继续node.js 又走回头路？"></a>一样的酸爽，同样的简洁。为什么不继续node.js 又走回头路？</h4><h3 id="透过现象看本质"><a href="#透过现象看本质" class="headerlink" title="透过现象看本质"></a>透过现象看本质</h3><p>编译型语言vs 解释行语言</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jmying.github.io/2017/06/29/Hello-World-Spring-Boot-vs-Node-js/" data-id="cj4id4upz0000uww5pxmv5ip7" class="article-share-link">Share</a>
+      <a data-url="https://jmying.github.io/2017/06/29/Hello-World-Spring-Boot-vs-Node-js/" data-id="cj4idlqnb0000rkw5y573x1re" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Server-Side/">Server-Side</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Server-Side/">Server-Side</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring/">spring</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring-boot/">spring boot</a></li></ul>
 
     </footer>
   </div>
@@ -146,7 +150,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Server-Side/">Server-Side</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Server-Side/">Server-Side</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring/">spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-boot/">spring boot</a></li></ul>
     </div>
   </div>
 
@@ -156,7 +160,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Server-Side/" style="font-size: 10px;">Server-Side</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a>
+      <a href="/tags/Server-Side/" style="font-size: 10px;">Server-Side</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/spring/" style="font-size: 10px;">spring</a> <a href="/tags/spring-boot/" style="font-size: 10px;">spring boot</a>
     </div>
   </div>
 
